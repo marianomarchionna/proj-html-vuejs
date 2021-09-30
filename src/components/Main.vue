@@ -49,7 +49,7 @@
     <section class="jumbotron">
       <div class="jumbo-txt">
         <p class="up-title">FEATURED ARTICLE</p>
-        <p class="jumbo-title">Cras malesuada et orgi eget pharetra</p>
+        <p class="main-title">Cras malesuada et orgi eget pharetra</p>
         <p class="under-title">In quis lectus sed leo elementum faucibus in dapibus dictum. Nullamolestie tortor nec lectus venenatis, sed blandit dui, dolor at bibendum sadips ets ipsum dolores ficilis uns leo lectus.</p>
         <button>READ MORE <i class="fas fa-chevron-right"></i></button>
       </div>
@@ -75,6 +75,44 @@
             <h5 class="news-title">Donec ornare pretium eget scelisque justo</h5>
             <p class="subtitle">October 11th, 2015 | Comments off</p>
             <p class="news-text">Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla, vestibulum placerat metus mattis. Aenean dictum vitae nisl</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section tutorial -->
+    <section class="tutorial clearfix">
+      <div class="tutorial-left">
+        <div class="product-txt">
+          <p class="up-title">REVIEWED PRODUCT</p>
+          <p class="main-title">Mauris viverra atisan ipsum eget felis prims efficitur varius</p>
+          <p class="under-title">In quis lectus sed leo elementum faucibus in dapibus dictum. Nullamolestie tortor nec lectus venenatis, sed blandit dui, dolor at bibendum.</p>
+          <button>READ MORE <i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+      <div class="tutorial-right">
+        <h2>Tutorials &#38; Guides</h2>
+        <div class="line"></div>
+        <div class="tutorial-articles">
+          <div class="tutorial-article">
+            <img src="../assets/img/post_feat_img_23-147x118.jpg" alt="Immagine articolo">
+            <div class="tutorial-text">
+              <h5 class="news-title">Donec ornare pretium eget scelisque justo</h5>
+              <p class="subtitle">October 11th, 2015 | Comments off</p>
+            </div>
+          </div>
+          <div class="tutorial-article">
+            <img src="../assets/img/post_feat_img_22-177x142.jpg" alt="Immagine articolo">
+            <div class="tutorial-text">
+              <h5 class="news-title">Fusce sollicitudin nunc sed placerat varius</h5>
+              <p class="subtitle">October 11th, 2015 | Comments off</p>
+            </div>
+          </div>
+          <div class="tutorial-article">
+            <img src="../assets/img/post_feat_img_20-147x118.jpg" alt="Immagine articolo">
+            <div class="tutorial-text">
+              <h5 class="news-title">Proin eu purus sed aru aliquet curabir vens</h5>
+              <p class="subtitle">October 11th, 2015 | Comments off</p>
+            </div>
           </div>
         </div>
       </div>
@@ -105,7 +143,7 @@ main {
   button {
     color: $white;
     border: none;
-    padding: 10px 25px;
+    padding: 15px 30px;
     font-weight: $bold;
     font-size: $small;
     cursor: pointer;
@@ -118,37 +156,60 @@ main {
     margin: 0 auto;
   }
   .news-image {
-      width: 100%;
-      .news {
-        width: calc(100% / 3 - 10px);
-        float: left;
-        text-align: start;
-        cursor: pointer;
-        margin-bottom: 50px;
-        img {
-          width: 100%;
-          margin-bottom: 15px;
-        }
-        h5 {
-          font-size: $small-normal;
-        }
-        .subtitle,
-        .news-text {
-          color: $nevada;
-          font-size: $small;
-        }
-        .subtitle {
-          margin-top: 5px;
-          margin-bottom: 10px;
-        }
-        .black {
-          color: $shark;
-        }
-      } 
-      .second {
-        margin: 0 15px;
+    margin-top: 50px;
+    width: 100%;
+    .news {
+      width: calc(100% / 3 - 10px);
+      float: left;
+      text-align: start;
+      cursor: pointer;
+      img {
+        width: 100%;
+        margin-bottom: 15px;
       }
+      .black {
+        color: $shark;
+      }
+    } 
+    .second {
+      margin: 0 15px;
     }
+  }
+  .news-title {
+    font-size: $small-normal;
+  }
+  .subtitle,
+  .news-text {
+    color: $nevada;
+    font-size: $small;
+  }
+  .subtitle {
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  .up-title,
+  .jumbo-title { 
+    font-weight: $bold;
+  }
+  .up-title {
+    font-size: $small-normal;
+  }
+  .main-title {
+    font-size: $big32;
+    padding: 20px 0;
+  }
+  .under-title {
+    font-size: $small;
+    padding-bottom: 20px;
+  }
+  button {
+    background-color: $shark;
+  }
+  .line {
+    background-color: $salmon;
+    height: 2px;
+    width: 70px;
+  }
   // section slider
   .slider {
     height: 600px;
@@ -201,18 +262,14 @@ main {
   }
   // section latest-news
   .latest-news {
-    margin-top: 70px;
+    margin: 70px 0;
     text-align: center;
     h2 {
       font-size: $more-big;
       margin-bottom: 20px;
     }
     .line {
-      background-color: $salmon;
-      height: 2px;
-      width: 10%;
       margin: auto;
-      margin-bottom: 50px;
     }
   }
   //section jumbotron
@@ -222,35 +279,62 @@ main {
     background-image: url('../assets/img/featured_article_1_bg.jpg');
     margin: 0 auto;
     background-size: cover;
-    color: $white;
     .jumbo-txt {
       position: relative;
       width: 90%;
       padding-left: 8%;
       top: 45%;
-      .up-title,
-      .jumbo-title { 
-        font-weight: $bold;
-      }
-      .up-title {
-        font-size: $small-normal;
-      }
-      .jumbo-title {
-        font-size: $big32;
-        padding: 20px 0;
-      }
-      .under-title {
-        font-size: $small;
-        padding-bottom: 20px;
-      }
-      button {
-        background-color: $shark;
-      }
+      color: $white;
     }
   }
   //section article
   .article {
     margin: 70px 0;
+  }
+  //section tutorial
+  .tutorial {
+    width: $container;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    .tutorial-left {
+      width: calc(100% / 3 * 2 - 10px);
+      float: left;
+      margin-right: 20px;
+      height: 400px;
+      background-image: url('../assets/img/featured_article_2_bg.jpg');
+      background-size: cover;
+      background-position: center;
+      .product-txt {
+        position: relative;
+        width: 90%;
+        padding-left: 12%;
+        top: 25%;
+        color: $white;
+      }
+    }
+    .tutorial-right {
+      height: 400px;
+      width: calc(100% / 3 * 1 - 10px);
+      float: left;
+      .line {
+        margin: 20px 0;
+      }
+      .tutorial-articles{
+        height: 82%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        .tutorial-article {
+          cursor: pointer;
+          display: flex;
+          img {
+            height: 90px;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
   }
 }
 </style>
