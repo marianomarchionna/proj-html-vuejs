@@ -6,8 +6,9 @@
       </div>
       <div class="header-nav">
         <ul class="nav-items">
-          <li v-for="(link, index) in links" :key="index" class="nav-item" :class="(link.active) ? 'active' : null">
+          <li v-for="(link, index) in links" :key="index" class="nav-item">
             <a :href="link.url">{{ link.text }}</a>
+            <div class="triangle" :class="(link.active) ? 'active' : null"></div>
           </li>
         </ul>
         <button>JOIN US</button>
@@ -60,21 +61,35 @@ header {
         align-items: center;
         list-style: none; 
         .nav-item {
+          line-height: 60px;
           margin: 0 10px;
-          a{
+          a {
             text-decoration: none;
             color: $white;
             font-size: $small;
           }
-          // &.active{
-          //   left: 40px;
-          //   width: 0; 
-          //   height: 0; 
-          //   border-left: 5px solid transparent;
-          //   border-right: 5px solid transparent;
-          //   border-top: 5px solid black;
-          //   position: relative;
-          // }
+          .active {
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%);
+            width: 0; 
+            height: 0; 
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-top: 15px solid $eastern-blue;;
+            position: relative;
+          }
+        }
+        .nav-item:hover .triangle {
+          bottom: 0;
+          left: 50%;
+          transform: translate(-50%);
+          width: 0; 
+          height: 0; 
+          border-left: 15px solid transparent;
+          border-right: 15px solid transparent;
+          border-top: 15px solid $eastern-blue;;
+          position: relative;
         }
       }
       button {
