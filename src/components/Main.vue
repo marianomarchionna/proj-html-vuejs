@@ -28,19 +28,19 @@
             <img src="../assets/img/post_feat_img_25-320x202.jpg" alt="Primo articolo">
             <h5 class="news-title">Morbi vitae dui euismod vulputate sollicitudin</h5>
             <p class="subtitle">October 11th, 2015 | <span class="black">2 Comments</span></p>
-            <p class="news-text">Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla, vestibulum placerat metus mattis.Aenean dictum vitae nisl</p>
+            <p class="news-text">Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla, vestibulum placerat metus mattis. Aenean dictum vitae nisl</p>
           </div>
           <div class="second news">
             <img src="../assets/img/post_feat_img_24-320x202.jpg" alt="Primo articolo">
             <h5 class="news-title">Vivamus pellenteque, felis quis varius</h5>
             <p class="subtitle">October 11th, 2015 | Comments off</p>
-            <p class="news-text">Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla, vestibulum placerat metus mattis.Aenean dictum vitae nisl</p>
+            <p class="news-text">Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla, vestibulum placerat metus mattis. Aenean dictum vitae nisl</p>
           </div>
           <div class="news">
             <img src="../assets/img/post_feat_img_23-320x202.jpg" alt="Primo articolo">
             <h5 class="news-title">Donec ornare pretium eget scelisque justo</h5>
             <p class="subtitle">October 11th, 2015 | Comments off</p>
-            <p class="news-text">Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla, vestibulum placerat metus mattis.Aenean dictum vitae nisl</p>
+            <p class="news-text">Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla, vestibulum placerat metus mattis. Aenean dictum vitae nisl</p>
           </div>
         </div>
       </div>
@@ -52,6 +52,31 @@
         <p class="jumbo-title">Cras malesuada et orgi eget pharetra</p>
         <p class="under-title">In quis lectus sed leo elementum faucibus in dapibus dictum. Nullamolestie tortor nec lectus venenatis, sed blandit dui, dolor at bibendum sadips ets ipsum dolores ficilis uns leo lectus.</p>
         <button>READ MORE <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </section>
+    <!-- section article -->
+    <section class="article">
+      <div class="container">
+        <div class="news-image clearfix">
+          <div class="news">
+            <img src="../assets/img/post_feat_img_22-320x202.jpg" alt="Primo articolo">
+            <h5 class="news-title">Fusce sollicitudin nunc sed placerat varius</h5>
+            <p class="subtitle">October 11th, 2015 | Comments off</p>
+            <p class="news-text">Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla, vestibulum placerat metus mattis. Aenean dictum vitae nisl</p>
+          </div>
+          <div class="second news">
+            <img src="../assets/img/post_feat_img_21-320x202.jpg" alt="Primo articolo">
+            <h5 class="news-title">Donec facilis sodales leo sit amet laoreet</h5>
+            <p class="subtitle">October 11th, 2015 | Comments off</p>
+            <p class="news-text">Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla, vestibulum placerat metus mattis. Aenean dictum vitae nisl</p>
+          </div>
+          <div class="news">
+            <img src="../assets/img/post_feat_img_20-320x202.jpg" alt="Primo articolo">
+            <h5 class="news-title">Donec ornare pretium eget scelisque justo</h5>
+            <p class="subtitle">October 11th, 2015 | Comments off</p>
+            <p class="news-text">Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla, vestibulum placerat metus mattis. Aenean dictum vitae nisl</p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -92,6 +117,38 @@ main {
     width: $container;
     margin: 0 auto;
   }
+  .news-image {
+      width: 100%;
+      .news {
+        width: calc(100% / 3 - 10px);
+        float: left;
+        text-align: start;
+        cursor: pointer;
+        margin-bottom: 50px;
+        img {
+          width: 100%;
+          margin-bottom: 15px;
+        }
+        h5 {
+          font-size: $small-normal;
+        }
+        .subtitle,
+        .news-text {
+          color: $nevada;
+          font-size: $small;
+        }
+        .subtitle {
+          margin-top: 5px;
+          margin-bottom: 10px;
+        }
+        .black {
+          color: $shark;
+        }
+      } 
+      .second {
+        margin: 0 15px;
+      }
+    }
   // section slider
   .slider {
     height: 600px;
@@ -157,37 +214,6 @@ main {
       margin: auto;
       margin-bottom: 50px;
     }
-    .news-image {
-      width: 100%;
-      .news {
-        width: calc(100% / 3 - 40px);
-        float: left;
-        text-align: start;
-        cursor: pointer;
-        margin-bottom: 50px;
-        img {
-          width: 100%;
-        }
-        h5 {
-          font-size: $small-normal;
-        }
-        .subtitle,
-        .news-text {
-          color: $nevada;
-          font-size: $small;
-        }
-        .subtitle {
-          margin-top: 5px;
-          margin-bottom: 10px;
-        }
-        .black {
-          color: $shark;
-        }
-      } 
-      .second {
-        margin: 0 20px;
-      }
-    }
   }
   //section jumbotron
   .jumbotron {
@@ -221,6 +247,10 @@ main {
         background-color: $shark;
       }
     }
+  }
+  //section article
+  .article {
+    margin: 70px 0;
   }
 }
 </style>
