@@ -117,6 +117,14 @@
         </div>
       </div>
     </section>
+    <!-- sezione black stripe -->
+    <section class="black-stripe">
+      <p>READ OUR BLOG <i class="fas fa-long-arrow-alt-right"></i></p>
+    </section>
+    <!-- sezione black stripe -->
+    <section class="black-stripe">
+      <p>GO TO OUR FORUM <i class="fas fa-long-arrow-alt-right"></i></p>
+    </section>
   </main>
 </template>
 
@@ -202,9 +210,6 @@ main {
     font-size: $small;
     padding-bottom: 20px;
   }
-  button {
-    background-color: $shark;
-  }
   .line {
     background-color: $salmon;
     height: 2px;
@@ -286,6 +291,9 @@ main {
       top: 45%;
       color: $white;
     }
+    button {
+      background-color: $shark;
+    }
   }
   //section article
   .article {
@@ -311,6 +319,9 @@ main {
         top: 25%;
         color: $white;
       }
+      button {
+        background-color: $shark;
+      }
     }
     .tutorial-right {
       height: 400px;
@@ -335,6 +346,19 @@ main {
         }
       }
     }
+  }
+  //sezione black stripe
+  .black-stripe {
+    width: 100%;
+    height: 100px;
+    background-color: $shark;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: $bold;
+    font-size: $small;
+    cursor: pointer;
   }
 }
 </style>
