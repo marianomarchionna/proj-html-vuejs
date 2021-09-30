@@ -54,6 +54,7 @@ header {
       height: 100%;
       width: 60%;
       display: flex;
+      justify-content: flex-end;
       align-items: center;
       .nav-items {
         height: 100%;
@@ -92,6 +93,10 @@ header {
           border-left: 15px solid transparent;
           border-right: 15px solid transparent;
           border-top: 15px solid $eastern-blue;
+        }
+        .nav-item:hover a {
+          font-size: $normal;
+          font-weight: $bold;
         }
       }
       button {

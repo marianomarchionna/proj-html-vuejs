@@ -17,6 +17,34 @@
         <p class="text">dolor at, bibendum purus. Donec vehicula nec tortor ac finibus.</p>
       </div>
     </section>
+    <!-- section latest-news -->
+    <section class="latest-news">
+      <div class="container">
+        <p class="title">PHASELLUS EGET METUS</p>
+        <h2>All the latest news</h2>
+        <div class="line"></div>
+        <div class="news-image">
+          <div class="news">
+            <img src="../assets/img/post_feat_img_25-320x202.jpg" alt="Primo articolo">
+            <h5 class="news-title">Morbi vitae dui euismod vulputate sollicitudin</h5>
+            <p class="subtitle">October 11th, 2015 | <span class="black">2 Comments</span></p>
+            <p class="news-text">Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla, vestibulum placerat metus mattis.Aenean dictum vitae nisl</p>
+          </div>
+          <div class="second news">
+            <img src="../assets/img/post_feat_img_24-320x202.jpg" alt="Primo articolo">
+            <h5 class="news-title">Vivamus pellenteque, felis quis varius</h5>
+            <p class="subtitle">October 11th, 2015 | Comments off</p>
+            <p class="news-text">Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla, vestibulum placerat metus mattis.Aenean dictum vitae nisl</p>
+          </div>
+          <div class="news">
+            <img src="../assets/img/post_feat_img_23-320x202.jpg" alt="Primo articolo">
+            <h5 class="news-title">Donec ornare pretium eget scelisque justo</h5>
+            <p class="subtitle">October 11th, 2015 | Comments off</p>
+            <p class="news-text">Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla, vestibulum placerat metus mattis.Aenean dictum vitae nisl</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 
@@ -34,6 +62,10 @@ export default {
 <style scoped lang="scss">
 @import "../style/general";
 main {
+  .container {
+    width: $container;
+    margin: 0 auto;
+  }
   // section slider
   .slider {
     height: 600px;
@@ -42,7 +74,7 @@ main {
     .slider-txt {
       position: relative;
       width: 100%;
-      padding-left: 15%;
+      padding-left: 13%;
       top: 55%;
       transform: translate(0, -55%);
       h1,
@@ -72,25 +104,71 @@ main {
   // section description
   .description {
     width: 100%;
-    height: 300px;
     background-color: $description;
     .description-container {
       width: 35%;
-      height: 100%;
       margin: 0 auto;
+      padding: 80px 0;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      .title {
-        color: $cape-cod;
-        font-weight: $bold;
-        font-size: $small;
-        margin: 20px 0;
-      }
       .text {
         color: $nevada;
         margin: 5px 0;
+      }
+    }
+  }
+  .title {
+    color: $cape-cod;
+    font-weight: $bold;
+    font-size: $small;
+    margin: 20px 0;
+  }
+  // section latest-news
+  .latest-news {
+    margin-top: 70px;
+    text-align: center;
+    h2 {
+      font-size: $more-big;
+      margin-bottom: 20px;
+    }
+    .line {
+      background-color: $salmon;
+      height: 2px;
+      width: 10%;
+      margin: auto;
+      margin-bottom: 50px;
+    }
+    .news-image {
+      width: 100%;
+      .news {
+        width: calc(100% / 3 - 40px);
+        float: left;
+        text-align: start;
+        cursor: pointer;
+        margin-bottom: 50px;
+        img {
+          width: 100%;
+        }
+        h5 {
+          font-size: $small-normal;
+        }
+        .subtitle,
+        .news-text {
+          color: $nevada;
+          font-size: $small;
+        }
+        .subtitle {
+          margin-top: 5px;
+          margin-bottom: 10px;
+        }
+        .black {
+          color: $shark;
+        }
+      } 
+      .second {
+        margin: 0 20px;
       }
     }
   }
