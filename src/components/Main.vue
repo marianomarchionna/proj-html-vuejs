@@ -1,20 +1,22 @@
 <template>
   <main>
-    <div class="slider">
+    <!-- section slider -->
+    <section class="slider">
       <div class="slider-txt">
         <h1>Tech Forum!</h1>
         <p>Discuss all the latest technology news and trends</p>
         <button>GET AVADA NOW! <i class="fas fa-chevron-right"></i></button>
       </div>
-    </div>
-    <div class="description">
+    </section>
+    <!-- section description -->
+    <section class="description">
       <div class="description-container">
         <p class="title">AVADA FORUM IS THE PLACE TO BE</p>
         <p class="text">In quis lectus sed leo elementum faucibus in dapibus dictum.</p>
         <p class="text">Nulla molestie tortor nec lectus venenatis, sed blandit dui finibus.</p>
         <p class="text">dolor at, bibendum purus. Donec vehicula nec tortor ac finibus.</p>
       </div>
-    </div>
+    </section>
   </main>
 </template>
 
@@ -32,13 +34,15 @@ export default {
 <style scoped lang="scss">
 @import "../style/general";
 main {
+  // section slider
   .slider {
     height: 600px;
     background-image: url('../assets/img/home_slider_bg.jpg');
     background-size: cover;
     .slider-txt {
       position: relative;
-      left: 15%;
+      width: 100%;
+      padding-left: 15%;
       top: 55%;
       transform: translate(0, -55%);
       h1,
@@ -65,6 +69,7 @@ main {
       }
     }
   }
+  // section description
   .description {
     width: 100%;
     height: 300px;

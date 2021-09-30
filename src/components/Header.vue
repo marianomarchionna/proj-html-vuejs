@@ -61,16 +61,18 @@ header {
         align-items: center;
         list-style: none; 
         .nav-item {
-          line-height: 60px;
-          margin: 0 10px;
+          position: relative;
+          text-align: center;
           cursor: pointer;
+          width: 65px;
           a {
             text-decoration: none;
             color: $white;
             font-size: $small;
           }
           .active {
-            bottom: 0;
+            position: absolute;
+            bottom: -28px;
             left: 50%;
             transform: translate(-50%);
             width: 0; 
@@ -78,19 +80,18 @@ header {
             border-left: 15px solid transparent;
             border-right: 15px solid transparent;
             border-top: 15px solid $eastern-blue;
-            position: relative;
           }
         }
         .nav-item:hover .triangle {
-          bottom: 0;
+          position: absolute;
+          bottom: -28px;
           left: 50%;
           transform: translate(-50%);
           width: 0; 
           height: 0; 
           border-left: 15px solid transparent;
           border-right: 15px solid transparent;
-          border-top: 15px solid $eastern-blue;;
-          position: relative;
+          border-top: 15px solid $eastern-blue;
         }
       }
       button {
@@ -113,6 +114,7 @@ header {
         transform: scale(1.2);
       }
       i:hover {
+        color: $shark;
         font-size: $big;
       }
     }
