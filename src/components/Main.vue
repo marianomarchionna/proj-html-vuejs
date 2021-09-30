@@ -7,6 +7,14 @@
         <button>GET AVADA NOW! <i class="fas fa-chevron-right"></i></button>
       </div>
     </div>
+    <div class="description">
+      <div class="description-container">
+        <p class="title">AVADA FORUM IS THE PLACE TO BE</p>
+        <p class="text">In quis lectus sed leo elementum faucibus in dapibus dictum.</p>
+        <p class="text">Nulla molestie tortor nec lectus venenatis, sed blandit dui finibus.</p>
+        <p class="text">dolor at, bibendum purus. Donec vehicula nec tortor ac finibus.</p>
+      </div>
+    </div>
   </main>
 </template>
 
@@ -54,6 +62,30 @@ main {
       }
       button:hover {
         transform: scale(1.2);
+      }
+    }
+  }
+  .description {
+    width: 100%;
+    height: 300px;
+    background-color: $description;
+    .description-container {
+      width: 35%;
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .title {
+        color: $cape-cod;
+        font-weight: $bold;
+        font-size: $small;
+        margin: 20px 0;
+      }
+      .text {
+        color: $nevada;
+        margin: 5px 0;
       }
     }
   }
