@@ -1,27 +1,33 @@
 const headerLinks = [
     {
         text: 'Home',
-        url: '#'
+        url: '#',
+        active: true
     },
     {
         text: 'Apple',
-        url: '#'
+        url: '#',
+        active: false
     },
     {
         text: 'Microsoft',
-        url: '#'
+        url: '#',
+        active: false
     },
     {
         text: 'Android',
-        url: '#'
+        url: '#',
+        active: false
     },
     {
         text: 'Forum',
-        url: '#'
+        url: '#',
+        active: false
     },
     {
         text: 'Contact us',
-        url: '#'
+        url: '#',
+        active: false
     }
 ];
 export default { headerLinks };
