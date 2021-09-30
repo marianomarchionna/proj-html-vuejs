@@ -23,7 +23,7 @@
         <p class="title">PHASELLUS EGET METUS</p>
         <h2>All the latest news</h2>
         <div class="line"></div>
-        <div class="news-image">
+        <div class="news-image clearfix">
           <div class="news">
             <img src="../assets/img/post_feat_img_25-320x202.jpg" alt="Primo articolo">
             <h5 class="news-title">Morbi vitae dui euismod vulputate sollicitudin</h5>
@@ -45,6 +45,15 @@
         </div>
       </div>
     </section>
+    <!-- section jumbotron -->
+    <section class="jumbotron">
+      <div class="jumbo-txt">
+        <p class="up-title">FEATURED ARTICLE</p>
+        <p class="jumbo-title">Cras malesuada et orgi eget pharetra</p>
+        <p class="under-title">In quis lectus sed leo elementum faucibus in dapibus dictum. Nullamolestie tortor nec lectus venenatis, sed blandit dui, dolor at bibendum sadips ets ipsum dolores ficilis uns leo lectus.</p>
+        <button>READ MORE <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </section>
   </main>
 </template>
 
@@ -61,7 +70,24 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 @import "../style/general";
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 main {
+  //common
+  button {
+    color: $white;
+    border: none;
+    padding: 10px 25px;
+    font-weight: $bold;
+    font-size: $small;
+    cursor: pointer;
+  }
+  button:hover {
+    transform: scale(1.2);
+  }
   .container {
     width: $container;
     margin: 0 auto;
@@ -78,26 +104,17 @@ main {
       top: 55%;
       transform: translate(0, -55%);
       h1,
-      p, 
-      button {
+      p {
         color: $white;
+      }
+      button {
+        background-color: $eastern-blue;
       }
       h1 {
         font-size: $bigger;
       }
       p {
         margin: 20px 0;
-      }
-      button {
-        background-color: $eastern-blue;
-        border: none;
-        padding: 10px 25px;
-        font-weight: $bold;
-        font-size: $small;
-        cursor: pointer;
-      }
-      button:hover {
-        transform: scale(1.2);
       }
     }
   }
@@ -169,6 +186,39 @@ main {
       } 
       .second {
         margin: 0 20px;
+      }
+    }
+  }
+  //section jumbotron
+  .jumbotron {
+    width: $container;
+    height: 500px;
+    background-image: url('../assets/img/featured_article_1_bg.jpg');
+    margin: 0 auto;
+    background-size: cover;
+    color: $white;
+    .jumbo-txt {
+      position: relative;
+      width: 90%;
+      padding-left: 8%;
+      top: 45%;
+      .up-title,
+      .jumbo-title { 
+        font-weight: $bold;
+      }
+      .up-title {
+        font-size: $small-normal;
+      }
+      .jumbo-title {
+        font-size: $big32;
+        padding: 20px 0;
+      }
+      .under-title {
+        font-size: $small;
+        padding-bottom: 20px;
+      }
+      button {
+        background-color: $shark;
       }
     }
   }

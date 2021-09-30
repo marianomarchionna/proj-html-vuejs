@@ -110,6 +110,7 @@ header {
         cursor: pointer; 
       }
       i {
+        width: 10px;
         color: $white;
         font-size: $small;
         margin-left: 10px;
