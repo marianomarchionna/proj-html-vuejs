@@ -63,6 +63,7 @@ header {
         .nav-item {
           line-height: 60px;
           margin: 0 10px;
+          cursor: pointer;
           a {
             text-decoration: none;
             color: $white;
@@ -76,7 +77,7 @@ header {
             height: 0; 
             border-left: 15px solid transparent;
             border-right: 15px solid transparent;
-            border-top: 15px solid $eastern-blue;;
+            border-top: 15px solid $eastern-blue;
             position: relative;
           }
         }
