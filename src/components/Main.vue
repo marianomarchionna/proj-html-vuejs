@@ -139,6 +139,14 @@
     <section class="black-stripe">
       <p>GO TO OUR FORUM <i class="fas fa-long-arrow-alt-right"></i></p>
     </section>
+    <!-- section join -->
+    <section class="join">
+      <div class="join-txt">
+        <div class="join-title">Hey! Join to our Community</div>
+        <p class="under-title">Nulla molestie tortor nec lectus venenatis, sed blandit dui finibus. Curabitur feugiat vulputate purus ipsum dolores ficilis uns etra.</p>
+        <button>SING UP <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </section>
   </main>
 </template>
 
@@ -413,6 +421,36 @@ main {
             font-size: $icon;
           }
         }
+      }
+    }
+  }
+  //section join 
+  .join{
+    width: 100%;
+    height: 500px;
+    background-image: url('../assets/img/join_now_cta_bg.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .join-txt {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 40%;
+      text-align: center;
+      .join-title {
+        color: $white;
+        font-weight: $bold;
+        font-size: $join;
+        padding-bottom: 20px;
+      }
+      .under-title {
+        color: $white;
+      }
+      button {
+        background-color: $eastern-blue;
       }
     }
   }
