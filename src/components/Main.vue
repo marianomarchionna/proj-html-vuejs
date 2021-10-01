@@ -21,7 +21,7 @@
     <section class="latest-news">
       <div class="container">
         <p class="title">PHASELLUS EGET METUS</p>
-        <h2>All the latest news</h2>
+        <h2 class="big-title">All the latest news</h2>
         <div class="line"></div>
         <div class="news-image clearfix">
           <div class="news">
@@ -121,6 +121,20 @@
     <section class="black-stripe">
       <p>READ OUR BLOG <i class="fas fa-long-arrow-alt-right"></i></p>
     </section>
+    <!-- section forum -->
+    <section class="forum">
+        <p class="title">PHASELLUS EGET METUS</p>
+        <h2 class="big-title">FORUM SECTION</h2>
+        <div class="line"></div>
+        <ul class="forum-items">
+          <li v-for="(link, index) in links" :key="index" class="forum-item">
+            <div class="circle">
+              <a :href="link.url"><i :class="link.text"></i></a>
+            </div>
+            <h4>{{ link.name }}</h4>
+          </li>
+        </ul>
+    </section>
     <!-- sezione black stripe -->
     <section class="black-stripe">
       <p>GO TO OUR FORUM <i class="fas fa-long-arrow-alt-right"></i></p>
@@ -129,10 +143,12 @@
 </template>
 
 <script>
+import Links from '@/data/Links.js'
 export default {
     name: 'Main',
     data(){
         return{
+          links: Links.forumLinks
         }
     }
 }
@@ -210,6 +226,10 @@ main {
     font-size: $small;
     padding-bottom: 20px;
   }
+  .big-title {
+    font-size: $more-big;
+    margin-bottom: 20px;
+  }
   .line {
     background-color: $salmon;
     height: 2px;
@@ -266,13 +286,10 @@ main {
     margin: 20px 0;
   }
   // section latest-news
-  .latest-news {
-    margin: 70px 0;
+  .latest-news, 
+  .forum {
+    padding: 70px 0;
     text-align: center;
-    h2 {
-      font-size: $more-big;
-      margin-bottom: 20px;
-    }
     .line {
       margin: auto;
     }
@@ -359,6 +376,45 @@ main {
     font-weight: $bold;
     font-size: $small;
     cursor: pointer;
+  }
+  //section forum
+  .forum {
+    background-color: $description;
+    .forum-items {
+      width: $container;
+      margin: 40px auto 0 auto;
+      list-style: none; 
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      .forum-item {
+        width: calc(100% / 4 - 40px);
+        height: 200px;
+        border-top: 2px solid $eastern-blue;
+        background-color: $white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        margin-bottom: 35px;
+        .circle {
+          width: 60px;
+          height: 60px;
+          background-color: $salmon;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 15px;
+          a {
+            text-decoration: none;
+            color: $white;
+            font-size: $icon;
+          }
+        }
+      }
+    }
   }
 }
 </style>
