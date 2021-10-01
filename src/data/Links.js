@@ -72,4 +72,46 @@ const forumLinks = [
         url: '#'
     }
 ];
-export default { headerLinks, forumLinks };
+const popularLinks = [
+    {
+        name: 'Nam a dolor volutpat massa auctor semper'
+    },
+    {
+        name: 'Sed euismodnunc urna fermentum arcu dapibus fringilla.'
+    },
+    {
+        name: 'Cras lacinia tellus id mauris finibus lacus molestie'
+    },
+    {
+        name: 'Curabitur a scelerisque ligula'
+    }
+];
+const recentLinks = [
+    {
+        name: 'Cras lacinia tellus id mauris finibus lacus molestie'
+    },
+    {
+        name: 'Proin at ligula sagittis vestibulum nisi vitae'
+    },
+    {
+        name: 'Sed nec metus at est tincidunt elementum'
+    },
+    {
+        name: 'Nulla egestas nulla eu nulla suscipit molestie'
+    }
+];
+const latestLinks = [
+    {
+        name: 'Cras lacinia tellus id mauris finibus lacus molestie'
+    },
+    {
+        name: 'Cras lacinia tellus id mauris finibus lacus molestie'
+    },
+    {
+        name: 'Nulla egestas nulla eu nulla suscipit molestie'
+    },
+    {
+        name: 'Mauris ac nibh quis eros sagittis lacinia a et dui'
+    }
+];
+export default { headerLinks, forumLinks, popularLinks, recentLinks, latestLinks };

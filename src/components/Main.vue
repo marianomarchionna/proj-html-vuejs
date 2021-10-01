@@ -155,6 +155,36 @@
         <button type="submit"><strong>SEND</strong></button>
       </form>
     </section>
+    <!-- section topics -->
+    <section class="topics">
+      <div class="topics-container">
+        <div class="column">
+          <h4>AVADA TECH FORUM</h4>
+          <p class="news-text">Sed semper, nisl id feugiat eleifend, erat est digssim felis, quis auctor elit enim nec ante. Cras et nibh risus. Pellentesque non mi sit amet mi intermentum.</p>
+        </div>
+        <div class="column">
+          <h4>POPULAR TOPICS</h4>
+          <div v-for="(popular, index) in populars" :key="index" class="column-item">
+            <i class="fas fa-chevron-right"></i>
+            <p>{{ popular.name }}</p>
+          </div>
+        </div>
+        <div class="column">
+          <h4>RECENT TOPICS</h4>
+          <div v-for="(recent, index) in recents" :key="index" class="column-item">
+            <i class="fas fa-chevron-right"></i>
+            <p>{{ recent.name }}</p>
+          </div>
+        </div>
+        <div class="column">
+          <h4>LATEST REPLIES</h4>
+          <div v-for="(latest, index) in latests" :key="index" class="column-item">
+            <i class="fas fa-chevron-right"></i>
+            <p>{{ latest.name }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 
@@ -164,7 +194,10 @@ export default {
     name: 'Main',
     data(){
         return{
-          links: Links.forumLinks
+          links: Links.forumLinks,
+          populars: Links.popularLinks,
+          recents: Links.recentLinks,
+          latests: Links.latestLinks
         }
     }
 }
@@ -482,6 +515,38 @@ main {
     button {
       background-color: $shark;
       padding: 13px 70px;
+    }
+  }
+  //section topics
+  .topics {
+    width: 100%;
+    border-bottom: 1px solid $description;
+    .topics-container{
+      width: $container;
+      margin: 60px auto;
+      display: flex;
+      justify-content: space-around;
+      .column {
+        width: calc(100% / 4 - 50px);
+        h4 {
+          font-size: $small-normal;
+          margin-bottom: 30px;
+        }
+        .column-item {
+          display: flex;
+          padding-bottom: 15px;
+          margin-bottom: 15px;
+          border-bottom: 1px solid $description;
+          p {
+            font-size: $small;
+          }
+          i {
+            margin-top: 2px;
+            margin-right: 5px;
+            font-size: $to-small;
+          }
+        }
+      }
     }
   }
 }
