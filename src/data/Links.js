@@ -114,4 +114,26 @@ const latestLinks = [
         name: 'Mauris ac nibh quis eros sagittis lacinia a et dui'
     }
 ];
-export default { headerLinks, forumLinks, popularLinks, recentLinks, latestLinks };
+const footerLinks = [
+    {
+        text: 'fab fa-facebook-f',
+        color: 'san-marino',
+        url: '#'
+    },
+    {
+        text: 'fab fa-twitter',
+        color: 'boston-blue',
+        url: '#'
+    },
+    {
+        text: 'fab fa-instagram',
+        color: 'wedgewood',
+        url: '#'
+    },
+    {
+        text: 'fab fa-youtube',
+        color: 'totem-pole',
+        url: '#'
+    }
+];
+export default { headerLinks, forumLinks, popularLinks, recentLinks, latestLinks, footerLinks };
