@@ -147,6 +147,14 @@
         <button>SING UP <i class="fas fa-chevron-right"></i></button>
       </div>
     </section>
+    <!-- section subscribe -->
+    <section class="subscribe">
+      <span class="subscribe-txt">Subscribe to our Newsletter</span>
+      <form>
+        <input type="text" placeholder="Insert your email*">
+        <button type="submit"><strong>SEND</strong></button>
+      </form>
+    </section>
   </main>
 </template>
 
@@ -452,6 +460,28 @@ main {
       button {
         background-color: $eastern-blue;
       }
+    }
+  }
+  //section subscribe
+  .subscribe {
+    width: 100%;
+    height: 250px;
+    background-color: $description;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .subscribe-txt {
+      font-size: $big;
+      margin-bottom: 15px;
+    }
+    input {
+      padding: 10px 220px 10px 20px;
+      margin-right: 20px;
+    }
+    button {
+      background-color: $shark;
+      padding: 13px 70px;
     }
   }
 }
