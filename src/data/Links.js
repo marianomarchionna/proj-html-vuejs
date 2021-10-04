@@ -74,44 +74,68 @@ const forumLinks = [
 ];
 const popularLinks = [
     {
-        name: 'Nam a dolor volutpat massa auctor semper'
+        name: 'Nam a dolor volutpat massa auctor semper',
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores omnis iste nemo nisi temporibus necessitatibus consequuntur, natus architecto placeat? Sunt asperiores iste maxime temporibus ipsa odio. Consequatur ratione quis deleniti.',
+        toggle : false
     },
     {
-        name: 'Sed euismodnunc urna fermentum arcu dapibus fringilla.'
+        name: 'Sed euismodnunc urna fermentum arcu dapibus fringilla.',
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores omnis iste nemo nisi temporibus necessitatibus consequuntur, natus architecto placeat? Sunt asperiores iste maxime temporibus ipsa odio. Consequatur ratione quis deleniti.',
+        toggle : false
     },
     {
-        name: 'Cras lacinia tellus id mauris finibus lacus molestie'
+        name: 'Cras lacinia tellus id mauris finibus lacus molestie',
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores omnis iste nemo nisi temporibus necessitatibus consequuntur, natus architecto placeat? Sunt asperiores iste maxime temporibus ipsa odio. Consequatur ratione quis deleniti.',
+        toggle : false
     },
     {
-        name: 'Curabitur a scelerisque ligula'
+        name: 'Curabitur a scelerisque ligula',
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores omnis iste nemo nisi temporibus necessitatibus consequuntur, natus architecto placeat? Sunt asperiores iste maxime temporibus ipsa odio. Consequatur ratione quis deleniti.',
+        toggle : false
     }
 ];
 const recentLinks = [
     {
-        name: 'Cras lacinia tellus id mauris finibus lacus molestie'
+        name: 'Cras lacinia tellus id mauris finibus lacus molestie',
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores omnis iste nemo nisi temporibus necessitatibus consequuntur, natus architecto placeat? Sunt asperiores iste maxime temporibus ipsa odio. Consequatur ratione quis deleniti.',
+        toggle : false
     },
     {
-        name: 'Proin at ligula sagittis vestibulum nisi vitae'
+        name: 'Proin at ligula sagittis vestibulum nisi vitae',
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores omnis iste nemo nisi temporibus necessitatibus consequuntur, natus architecto placeat? Sunt asperiores iste maxime temporibus ipsa odio. Consequatur ratione quis deleniti.',
+        toggle : false
     },
     {
-        name: 'Sed nec metus at est tincidunt elementum'
+        name: 'Sed nec metus at est tincidunt elementum',
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores omnis iste nemo nisi temporibus necessitatibus consequuntur, natus architecto placeat? Sunt asperiores iste maxime temporibus ipsa odio. Consequatur ratione quis deleniti.',
+        toggle : false
     },
     {
-        name: 'Nulla egestas nulla eu nulla suscipit molestie'
+        name: 'Nulla egestas nulla eu nulla suscipit molestie',
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores omnis iste nemo nisi temporibus necessitatibus consequuntur, natus architecto placeat? Sunt asperiores iste maxime temporibus ipsa odio. Consequatur ratione quis deleniti.',
+        toggle : false
     }
 ];
 const latestLinks = [
     {
-        name: 'Cras lacinia tellus id mauris finibus lacus molestie'
+        name: 'Cras lacinia tellus id mauris finibus lacus molestie',
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores omnis iste nemo nisi temporibus necessitatibus consequuntur, natus architecto placeat? Sunt asperiores iste maxime temporibus ipsa odio. Consequatur ratione quis deleniti.',
+        toggle : false
     },
     {
-        name: 'Cras lacinia tellus id mauris finibus lacus molestie'
+        name: 'Cras lacinia tellus id mauris finibus lacus molestie',
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores omnis iste nemo nisi temporibus necessitatibus consequuntur, natus architecto placeat? Sunt asperiores iste maxime temporibus ipsa odio. Consequatur ratione quis deleniti.',
+        toggle : false
     },
     {
-        name: 'Nulla egestas nulla eu nulla suscipit molestie'
+        name: 'Nulla egestas nulla eu nulla suscipit molestie',
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores omnis iste nemo nisi temporibus necessitatibus consequuntur, natus architecto placeat? Sunt asperiores iste maxime temporibus ipsa odio. Consequatur ratione quis deleniti.',
+        toggle : false
     },
     {
-        name: 'Mauris ac nibh quis eros sagittis lacinia a et dui'
+        name: 'Mauris ac nibh quis eros sagittis lacinia a et dui',
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores omnis iste nemo nisi temporibus necessitatibus consequuntur, natus architecto placeat? Sunt asperiores iste maxime temporibus ipsa odio. Consequatur ratione quis deleniti.',
+        toggle : false
     }
 ];
 const footerLinks = [

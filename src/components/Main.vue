@@ -165,22 +165,37 @@
         <div class="column">
           <h4>POPULAR TOPICS</h4>
           <div v-for="(popular, index) in populars" :key="index" class="column-item">
-            <i class="fas fa-chevron-right"></i>
-            <p>{{ popular.name }}</p>
+            <div v-on:click="popular.toggle = ! popular.toggle" class="topic">
+              <i class="fas fa-chevron-right"></i>
+              <p>{{ popular.name }}</p>
+            </div>
+            <div id="invisible" v-if='popular.toggle'>
+              <p>{{ popular.text }}</p>
+            </div>
           </div>
         </div>
         <div class="column">
           <h4>RECENT TOPICS</h4>
           <div v-for="(recent, index) in recents" :key="index" class="column-item">
-            <i class="fas fa-chevron-right"></i>
-            <p>{{ recent.name }}</p>
+            <div v-on:click="recent.toggle = ! recent.toggle" class="topic">
+              <i class="fas fa-chevron-right"></i>
+              <p>{{ recent.name }}</p>
+            </div>
+            <div id="invisible" v-if='recent.toggle'>
+              <p>{{ recent.text }}</p>
+            </div>
           </div>
         </div>
         <div class="column">
           <h4>LATEST REPLIES</h4>
           <div v-for="(latest, index) in latests" :key="index" class="column-item">
-            <i class="fas fa-chevron-right"></i>
-            <p>{{ latest.name }}</p>
+            <div v-on:click="latest.toggle = ! latest.toggle" class="topic">
+              <i class="fas fa-chevron-right"></i>
+              <p>{{ latest.name }}</p>
+            </div>
+            <div id="invisible" v-if='latest.toggle'>
+              <p>{{ latest.text }}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -199,6 +214,11 @@ export default {
           recents: Links.recentLinks,
           latests: Links.latestLinks
         }
+    },
+    methods: {
+      ToggleDiv(txtDivID){
+        (txtDivID).display('block')
+      }
     }
 }
 </script>
@@ -533,17 +553,26 @@ main {
           margin-bottom: 30px;
         }
         .column-item {
-          display: flex;
           padding-bottom: 15px;
           margin-bottom: 15px;
           border-bottom: 1px solid $description;
-          p {
-            font-size: $small;
+          .topic {
+            display: flex;
+            cursor: pointer;
+            text-decoration: none;
+            color: $shark;
+            p {
+              font-size: $small;
+            }
+            i {
+              margin-top: 2px;
+              margin-right: 5px;
+              font-size: $to-small;
+            }
           }
-          i {
-            margin-top: 2px;
-            margin-right: 5px;
-            font-size: $to-small;
+          #invisible {
+            margin-top: 15px;
+            font-size: $small;
           }
         }
       }
