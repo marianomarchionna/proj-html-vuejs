@@ -10,8 +10,16 @@
         </div>
       </div>
     </div>
-    <div class="arrow-up">
+    <div class="arrow-up" v-on:click="toggle = ! toggle">
       <i class="fas fa-chevron-up"></i>
+    </div>
+    <div class="createfrom" v-if="toggle">
+      <p>
+        Grazie per aver visitato il nostro sito 
+      </p>
+      <span>
+        - Mariano Marchionna
+      </span>
     </div>
   </footer>
 </template>
@@ -22,7 +30,8 @@ export default {
     name: 'Footer',
     data(){
         return{
-            links: Links.footerLinks
+            links: Links.footerLinks,
+            toggle: false
         }
     }
 }
@@ -78,18 +87,34 @@ footer {
       }
     }
   }
-  .arrow-up {
+  .arrow-up, 
+  .createfrom {
     position: relative;
-    left: 95%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 30px;
-    width: 35px;
     color: $white;
     background-color: $cape-cod;
     border-top-left-radius: 3px;
+    display: flex;
+  }
+  .arrow-up {
+    left: 95%;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 3%;
     border-top-right-radius: 3px;
+    cursor: pointer;
+  }  
+  .createfrom {
+    left: 88%;
+    height: 150px;
+    width: 10%;
+    flex-direction: column;
+    justify-content: space-between;
+    p, 
+    span {
+      width: 80%;
+      margin: auto;
+    }
   }
 }
 </style>
